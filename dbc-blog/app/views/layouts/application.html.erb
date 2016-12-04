@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<%= link_to('login'), :controller => 'sessions', :action => 'new' %>
+
+<%= link_to('register'), :controller => 'users', :action => 'new' %>
+
+<%= link_to('home'), root_path %>
+
+<!-- need one for logout -->
+
 <%= yield %>
 
 </body>
