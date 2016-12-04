@@ -1,0 +1,5 @@
+<h1>All Entries</h1>
+
+<% @entries.try('each') do |entry| %>
+	<p><%= entry.title %></p>
+<% end %>
