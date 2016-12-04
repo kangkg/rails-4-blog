@@ -1,0 +1,20 @@
+<h3>USER LOGIN:</h3>
+
+<%= form_tag '/login' do %>
+
+	<!-- error checking needed. -->
+	<% if @errors %>
+		<% @errors.each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+	<% end %>
+
+	<div>
+		username: <%= text_field_tag :username %>
+		<br>
+		password: <%= password_field_tag :password %>
+		<br>
+		<%= submit_tag "Submit LOGIN!" %>
+	</div>
+
+<% end %>
