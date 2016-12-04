@@ -11,6 +11,7 @@ class EntriesController < ApplicationController
 		if @entry.save
 			redirect_to '/' #could be root?
 		else
+			@errors = @entry.errors.full_messages
 			render :new
 		end
 	end
