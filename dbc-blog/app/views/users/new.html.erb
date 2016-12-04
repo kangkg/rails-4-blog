@@ -1,0 +1,21 @@
+<h3>USER REGISTRATION:</h3>
+
+<%= form_for @user do |f| %>
+
+	<!-- error checking needed. -->
+	<% if @errors %>
+		<% @errors.each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+	<% end %>
+
+	<div>
+		username: <%= f.text_field :username %>
+		<br>
+		password: <%= f.password_field :password %>
+		re-enter your password: <%= f.password_field :password_confirmation %>
+		<br>
+		<%= f.submit "Submit Registration!" %>
+	</div>
+
+<% end %>

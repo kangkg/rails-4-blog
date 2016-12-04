@@ -5,11 +5,18 @@ class UsersController < ApplicationController
 	end
 
 	def create 
-		@user = User.create(user_params)
+		@user = User.new(user_params)
+		if @user.save
+			session[:user_id] = @user.id
+			redirect_to '/'
+		else
+			flash[:alert] = "Error creating user."
+			render :new
+		end
 	end
 
-	def new 
-		# @users = User.all
+	def show
+		# @user = User.find_by()
 	end
 
 	private
