@@ -26,8 +26,3 @@ class UsersController < ApplicationController
 	end
 
 end
-
-# get '/users/' do
-# 	@user = User.all
-# 	erb :'users/index'
-# end

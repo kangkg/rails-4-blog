@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 	end
 
 	def delete
-		# logout
+		session[:user_id] = nil
 	end
 
 end
