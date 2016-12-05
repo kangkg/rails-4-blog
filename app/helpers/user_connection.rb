@@ -9,5 +9,3 @@ module UserConnection
 	end
 
 end
-
-helpers UserConnection
