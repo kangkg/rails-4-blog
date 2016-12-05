@@ -1,0 +1,23 @@
+<h3>New Entry: </h3>
+
+<%= form_for @entry do |f| %>
+
+	<!-- error checking needed. -->
+	<% if @errors %>
+		<% @errors.each do |error| %>
+			<p><%= error %></p>
+		<% end %>
+	<% end %>
+
+	<div>
+		title: <%= f.text_field :title %>
+		<br>
+		body: <%= f.text_area :body, size: "60x12" %> 
+		<br>
+		<%= f.hidden_field :author_id, value: 1  %>
+		<!-- " #{current_user.id}" -->
+		<br>
+		<%= f.submit "Submit Entry!" %>
+	</div>
+
+<% end %>

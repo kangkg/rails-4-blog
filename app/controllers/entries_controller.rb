@@ -2,6 +2,7 @@ class EntriesController < ApplicationController
 
 	# GET /entries
 	def index 
+		@entry = Entry.new
 		@entries = Entry.all
 	end
 

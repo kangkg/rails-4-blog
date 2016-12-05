@@ -3,3 +3,6 @@
 <% @entries.try('each') do |entry| %>
 	<p><%= entry.title %></p>
 <% end %>
+
+<br>
+<%= render "/entries/form" %>
